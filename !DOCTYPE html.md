@@ -1,0 +1,174 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Cirque Achille Zavatta</title>  
+  
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">  
+  
+<style>  
+body {  
+    margin: 0;  
+    font-family: 'Poppins', sans-serif;  
+    background: #0d0d0d;  
+    color: white;  
+}  
+  
+/* HEADER */  
+header {  
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),  
+    url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf') center/cover;  
+    height: 90vh;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+}  
+  
+header h1 {  
+    font-size: 60px;  
+    color: gold;  
+    font-family: 'Playfair Display', serif;  
+}  
+  
+header p {  
+    font-size: 22px;  
+}  
+  
+/* SECTIONS */  
+section {  
+    padding: 50px 20px;  
+    text-align: center;  
+}  
+  
+h2 {  
+    color: gold;  
+    font-size: 32px;  
+    margin-bottom: 20px;  
+}  
+  
+/* TOUR */  
+.tour-container {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: center;  
+}  
+  
+.tour {  
+    background: #1a1a1a;  
+    margin: 15px;  
+    padding: 20px;  
+    width: 250px;  
+    border-radius: 15px;  
+    border: 2px solid gold;  
+    transition: 0.3s;  
+}  
+  
+.tour:hover {  
+    transform: scale(1.05);  
+}  
+  
+.ville {  
+    font-size: 24px;  
+    font-weight: bold;  
+    color: gold;  
+}  
+  
+.date {  
+    margin-top: 10px;  
+    color: #ccc;  
+}  
+  
+/* BUTTON */  
+.btn {  
+    margin-top: 20px;  
+    padding: 12px 25px;  
+    background: gold;  
+    color: black;  
+    border: none;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    font-weight: bold;  
+}  
+  
+/* FOOTER */  
+footer {  
+    background: black;  
+    padding: 20px;  
+}  
+  
+/* MOBILE */  
+@media (max-width: 768px) {  
+    header h1 {  
+        font-size: 35px;  
+    }  
+  
+    header p {  
+        font-size: 18px;  
+    }  
+  
+    .tour {  
+        width: 90%;  
+    }  
+}  
+</style>  
+</head>  
+  
+<body>  
+  
+<header>  
+    <div>  
+        <h1>🎪 Cirque Achille Zavatta</h1>  
+        <p>Le spectacle incontournable pour toute la famille</p>  
+        <button class="btn">Réserver</button>  
+    </div>  
+</header>  
+  
+<section>  
+    <h2>✨ Le Spectacle</h2>  
+    <p>Acrobates, magie, clowns et sensations fortes dans un show exceptionnel !</p>  
+</section>  
+  
+<section>  
+    <h2>📍 Tournée</h2>  
+  
+    <div class="tour-container">  
+  
+        <div class="tour">  
+            <div class="ville">Strasbourg</div>  
+            <div class="date">10 - 15 Juin</div>  
+        </div>  
+  
+        <div class="tour">  
+            <div class="ville">Colmar</div>  
+            <div class="date">20 - 25 Juin</div>  
+        </div>  
+  
+        <div class="tour">  
+            <div class="ville">Mulhouse</div>  
+            <div class="date">1 - 5 Juillet</div>  
+        </div>  
+  
+        <!-- AJOUTE TES VILLES ICI -->  
+        <!--  
+        <div class="tour">  
+            <div class="ville">Ville</div>  
+            <div class="date">Dates</div>  
+        </div>  
+        -->  
+  
+    </div>  
+</section>  
+  
+<section>  
+    <h2>📞 Contact</h2>  
+    <p>Réservations : 06 00 00 00 00</p>  
+</section>  
+  
+<footer>  
+    <p>© 2026 Cirque Achille Zavatta</p>  
+</footer>  
+  
+</body>  
+</html>  

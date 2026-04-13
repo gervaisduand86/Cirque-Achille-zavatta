@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html.md 
 <html lang="fr">  
 <head>  
 <meta charset="UTF-8">  

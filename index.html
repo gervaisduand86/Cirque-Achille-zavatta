@@ -6,125 +6,123 @@
 <title>Cirque Achille Zavatta</title>  
   
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">  
-  
-<style>  
-body {  
-    margin: 0;  
-    font-family: 'Poppins', sans-serif;  
-    background: #0d0d0d;  
-    color: white;  
-}  
-  
-/* HEADER */  
-header {  
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),  
-    url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf') center/cover;  
-    height: 90vh;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    text-align: center;  
-}  
-  
-header h1 {  
-    font-size: 60px;  
-    color: gold;  
-    font-family: 'Playfair Display', serif;  
-}  
-  
-header p {  
-    font-size: 22px;  
-}  
-  
-/* SECTIONS */  
-section {  
-    padding: 50px 20px;  
-    text-align: center;  
-}  
-  
-h2 {  
-    color: gold;  
-    font-size: 32px;  
-    margin-bottom: 20px;  
-}  
-  
-/* TOUR */  
-.tour-container {  
-    display: flex;  
-    flex-wrap: wrap;  
-    justify-content: center;  
-}  
-  
-.tour {  
-    background: #1a1a1a;  
-    margin: 15px;  
-    padding: 20px;  
-    width: 250px;  
-    border-radius: 15px;  
-    border: 2px solid gold;  
-    transition: 0.3s;  
-}  
-  
-.tour:hover {  
-    transform: scale(1.05);  
-}  
-  
-.ville {  
-    font-size: 24px;  
-    font-weight: bold;  
-    color: gold;  
-}  
-  
-.date {  
-    margin-top: 10px;  
-    color: #ccc;  
-}  
-  
-/* BUTTON */  
-.btn {  
-    margin-top: 20px;  
-    padding: 12px 25px;  
-    background: gold;  
-    color: black;  
-    border: none;  
-    border-radius: 25px;  
-    cursor: pointer;  
-    font-weight: bold;  
-}  
-  
-/* FOOTER */  
-footer {  
-    background: black;  
-    padding: 20px;  
-}  
-  
-/* MOBILE */  
-@media (max-width: 768px) {  
-    header h1 {  
-        font-size: 35px;  
-    }  
-  
-    header p {  
-        font-size: 18px;  
-    }  
-  
-    .tour {  
-        width: 90%;  
-    }  
-}  
-</style>  
+  <style>
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  color: white;
+}
+
+/* HEADER CINEMA */
+header {
+  background: url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf');
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.75);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  color: gold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px gold;
+}
+
+.subtitle {
+  font-size: 22px;
+  margin: 20px;
+  color: #ddd;
+}
+
+/* BOUTON PRO */
+.btn {
+  background: linear-gradient(45deg, gold, orange);
+  padding: 15px 35px;
+  border-radius: 40px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px gold;
+}
+
+/* SECTION */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: gold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.tour-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tour {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid gold;
+}
+
+.ville {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.date {
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #888;
+}
+
+</style>
 </head>  
   
 <body>  
   
-<header>  
-    <div>  
-<img src="61EECDBC-3FC5-44EC-8F10-DDB48809AC22.png" style="width:120px; margin-bottom:20px;">
+<header>
+  <div class="overlay">
 
-<h1>Cirque Achille Zavatta</h1> 
-        <p>Le spectacle incontournable pour toute la famille</p>  
-        <button class="btn">Réserver</button>  
-    </div>  
+    <img src="61EECDBC-3FC5-44EC-8F10-DDB48809AC22.png" class="logo">
+
+    <h1>CIRQUE ACHILLE ZAVATTA</h1>
+
+    <p class="subtitle">
+      ✨ Un spectacle grandiose, magique et inoubliable ✨
+    </p>
+
+    <a href="#tournee" class="btn">🎟 Réserver maintenant</a>
+
+  </div>
 </header>  
   
 <section>  

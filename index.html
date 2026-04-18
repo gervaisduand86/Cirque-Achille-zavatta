@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cirque Achille Zavatta</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
-
 <style>
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   background: black;
   color: white;
+  scroll-behavior: smooth;
 }
 
-/* HERO VIDEO */
+/* VIDEO FOND /
 .hero {
   position: relative;
   height: 100vh;
@@ -27,140 +26,126 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.5);
 }
 
 .overlay {
   position: relative;
   z-index: 2;
-  background: rgba(0,0,0,0.6);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
+/ LOGO /
 .logo {
   width: 120px;
   margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px gold;
 }
 
+/ TITRES /
 h1 {
   font-size: 60px;
   color: gold;
-  text-shadow: 0 0 20px gold;
+  text-shadow: 0 0 30px gold;
 }
 
 .subtitle {
   font-size: 22px;
-  margin: 20px;
+  margin: 15px;
 }
 
-/* BUTTON */
+/ BOUTON /
 .btn {
-  background: gold;
-  color: black;
+  background: linear-gradient(45deg, gold, orange);
   padding: 15px 35px;
-  border-radius: 30px;
+  border-radius: 40px;
+  color: black;
   font-weight: bold;
   text-decoration: none;
+  box-shadow: 0 0 20px gold;
 }
 
-/* SECTION IMAGE */
+/ SECTION IMAGE /
 .section {
   position: relative;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.section .content {
-  background: rgba(0,0,0,0.7);
-  padding: 30px;
+  padding: 80px 20px;
   text-align: center;
-  max-width: 600px;
+  background: linear-gradient(black, #111);
 }
 
-h2 {
-  color: gold;
+/ TOURNÉE STYLE PRO /
+.tournee {
+  padding: 60px 20px;
 }
 
-/* TOUR */
-.tour {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.tour p {
-  margin: 10px;
-  font-size: 18px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
+.ville {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid gold;
   padding: 20px;
-  background: black;
-  color: #aaa;
+  margin: 20px auto;
+  max-width: 320px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
+
+.ville:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+.ville h3 {
+  color: gold;
+  font-size: 22px;
+}
+
+/ ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO VIDEO -->
+<!-- VIDEO FOND -->
 <section class="hero">
-  <video autoplay muted loop>
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-  </video>
-
-  <div class="overlay">
-
-    <img src="61EECDBC-3FC5-44EC-8F10-DDB48809AC22.png" class="logo">
-
-    <h1>CIRQUE ZAVATTA</h1>
-    <p class="subtitle">✨ Le spectacle incontournable ✨</p>
-
-    <a href="#tournee" class="btn">🎟 Réserver</a>
-
-  </div>
-</section>
-
-<!-- SPECTACLE -->
-<section class="section" style="background-image:url('https://images.unsplash.com/photo-1525869811964-53594bfcb4b0');">
-  <div class="content">
-    <h2>✨ Le Spectacle</h2>
-    <p>
-      Acrobates, clowns, magie et émotions fortes.
-      Un moment unique sous le chapiteau.
-    </p>
-  </div>
-  <section class="hero">
 
   <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4">
   </video>
 
   <div class="overlay">
-
     <img src="61EECDBC-3FC5-44EC-8F10-DDB48809AC22.png" class="logo">
 
     <h1>CIRQUE ZAVATTA</h1>
     <p class="subtitle">✨ Le spectacle incontournable ✨</p>
 
     <a href="#tournee" class="btn">🎟 Réserver</a>
-
   </div>
 
 </section>
+
+<!-- SPECTACLE -->
+<section class="section fade">
+  <h2>✨ Le Spectacle</h2>
+  <p>Acrobates, clowns, magie et sensations fortes pour toute la famille.</p>
 </section>
 
 <!-- VIDEO -->
-<section style="text-align:center; padding:50px;">
+<section class="section fade">
   <h2>🎬 Découvrez le spectacle</h2>
 
   <iframe width="90%" height="400"
@@ -170,46 +155,52 @@ footer {
 </section>
 
 <!-- TOURNEE -->
-<section id="tournee" class="tour">
-  <h2>📍 Tournée Normandie</h2>
+<section id="tournee" class="tournee fade">
 
-  <p>Vire – 18 & 19 avril</p>
-  <p>Villedieu – 25 & 26 avril</p>
-  <p>Valognes – 2 & 3 mai</p>
-  <p>La Hague – 8, 9 & 10 mai</p>
+  <h2>📍 EN TOURNÉE</h2>
+
+  <div class="ville">
+    <h3>VIRE</h3>
+    <p>18 avril 16h</p>
+    <p>19 avril 15h</p>
+  </div>
+
+  <div class="ville">
+    <h3>VILLE-DIEU</h3>
+    <p>25 avril 16h</p>
+    <p>26 avril 15h</p>
+  </div>
+
+  <div class="ville">
+    <h3>VALOGNES</h3>
+    <p>2 mai 16h</p>
+    <p>3 mai 15h</p>
+  </div>
+
+  <div class="ville">
+    <h3>LA HAGUE</h3>
+    <p>8, 9 mai 16h</p>
+    <p>10 mai 15h</p>
+  </div>
 
   <br>
 
   <a href="tel:0766261407" class="btn">📞 Réserver</a>
+
 </section>
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
 
-.hero video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+<script>
+const faders = document.querySelectorAll('.fade');
 
-.overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(0,0,0,0.6);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-<footer>
-  © 2026 Cirque Achille Zavatta
-</footer>
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+});
+</script>
 
 </body>
 </html>

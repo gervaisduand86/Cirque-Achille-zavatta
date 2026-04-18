@@ -182,7 +182,31 @@ footer {
 
   <a href="tel:0766261407" class="btn">📞 Réserver</a>
 </section>
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 <footer>
   © 2026 Cirque Achille Zavatta
 </footer>
